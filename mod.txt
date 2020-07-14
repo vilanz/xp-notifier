@@ -1,0 +1,7 @@
+{
+	"name" : "XP Log",
+	"description" : "Logs xp",
+	"author" : "vilanz",
+	"contact" : "vs.lanzarini@gmail.com",
+	"version" : "1.0"
+}
