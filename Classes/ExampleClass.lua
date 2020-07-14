@@ -1,4 +1,4 @@
-ExampleClass = ExampleClass or class()
+ExampleClass = ExampleClass or {}
 
 function ExampleClass:init()
 
