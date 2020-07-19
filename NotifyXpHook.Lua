@@ -7,11 +7,9 @@ function HUDManager:update(...)
 	if new_total_exp > total_xp_gained then
 		local xp_increase = new_total_exp - total_xp_gained
 		total_xp_gained = new_total_exp
-		managers.chat:send_message(
-			ChatManager.GAME,
-			"XP Notifier",
-			" "..xp_increase.."xp gained"
-		)
+		managers.hud:show_hint({
+			text = xp_increase.." EXP gained"
+		})
 	end
 	return update_original(self, ...)
 end
