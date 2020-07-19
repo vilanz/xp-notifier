@@ -1,4 +1,0 @@
-<!--Read here for info about modules https://github.com/simon-wh/PAYDAY-2-BeardLib/wiki/Module-Config -->
-<mod min_lib_ver="3.0">
-    <AssetUpdates id="-1" version="1.0" provider="modworkshop"/>
-</mod>
