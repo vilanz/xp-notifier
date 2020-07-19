@@ -2,8 +2,9 @@
 	"name" : "XPNotifier",
 	"description" : "Logs experience gains",
 	"author" : "vilanz",
-	"version" : "1.0", 
+	"version" : "1.0",
+	"image": "icon.png",
 	"hooks": [{
-		"hook_id":"lib/managers/hudmanagerpd2", "script_path":"NotifyXpHook.lua"			
+		"hook_id": "lib/managers/hudmanagerpd2", "script_path": "NotifyXpHook.lua"			
 	}]
 }
