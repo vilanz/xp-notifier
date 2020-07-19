@@ -10,8 +10,8 @@ function HUDManager:update(...)
 		managers.chat:send_message(
 			ChatManager.GAME,
 			"XP Notifier",
-            " "..xp_increase.."xp gained"
-        )
+			" "..xp_increase.."xp gained"
+		)
 	end
 	return update_original(self, ...)
 end
