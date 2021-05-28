@@ -8,13 +8,7 @@ function ExperienceManager:mission_xp_award(amount)
 	end
 end
 
-function comma_value(amount)
-  local formatted = amount
-  while true do  
-    formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1.%2')
-    if (k==0) then
-      break
-    end
-  end
-  return formatted
+function comma_value(n)
+  return tostring(math.floor(n)):reverse():gsub("(%d%d%d)","%1.")
+                                :gsub(",(%-?)$","%1"):reverse()
 end
