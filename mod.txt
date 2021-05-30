@@ -6,7 +6,7 @@
 	"image": "icon.png",
 	"hooks": [{
 		"hook_id": "lib/managers/experiencemanager",
-		"script_path": "NotifyXpHook.lua"			
+		"script_path": "mod.lua"			
 	}],
 	"updates": [{
 		"identifier": "xp-notifier",
