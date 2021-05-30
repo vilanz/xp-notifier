@@ -1,18 +1,23 @@
-local original_fn = ExperienceManager.mission_xp_award
 
-function ExperienceManager:mission_xp_award(amount)
-	original_fn(self, amount)
+local previous_total_xp = 0
+Hooks:PreHook(ExperienceManager, "mission_xp_award", "xp_notifier_before_xp_increase", function ()
+    log("XpNotifier - before")
+	previous_total_xp = get_current_total_xp()
+end)
+
+Hooks:PostHook(ExperienceManager, "mission_xp_award", "xp_notifier_after_xp_increase", function ()
+    log("XpNotifier - after")
+	local new_total_xp = get_current_total_xp()
+	local xp_added = new_total_xp - previous_total_xp
 	
-	if managers.hud ~= nil then
-		local xp_gained_text = comma_separated_number(amount) .. " XP gained"
-		managers.hud:show_hint({ text = xp_gained_text })
-	end	
+	local notification_text = xp_string(xp_added) .. " XP gained (Total XP: " .. xp_string(new_total_xp) .. ")"
+	managers.hud:show_hint({ text = notification_text })
+end)
+
+function get_current_total_xp()
+	return managers.experience:get_xp_dissected(true, 0, true)
 end
 
-function comma_separated_number(n)
-	return tostring(math.floor(n))
-		:reverse()
-		:gsub("(%d%d%d)","%1,")
-		:gsub(",(%-?)$","%1")
-		:reverse()
+function xp_string(n)
+	return managers.experience:experience_string(n)
 end
