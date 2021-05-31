@@ -1,12 +1,10 @@
 
 local previous_total_xp = 0
 Hooks:PreHook(ExperienceManager, "mission_xp_award", "xp_notifier_before_xp_increase", function ()
-    log("XpNotifier - before")
 	previous_total_xp = get_current_total_xp()
 end)
 
 Hooks:PostHook(ExperienceManager, "mission_xp_award", "xp_notifier_after_xp_increase", function ()
-    log("XpNotifier - after")
 	local new_total_xp = get_current_total_xp()
 	local xp_added = new_total_xp - previous_total_xp
 	
@@ -15,7 +13,8 @@ Hooks:PostHook(ExperienceManager, "mission_xp_award", "xp_notifier_after_xp_incr
 end)
 
 function get_current_total_xp()
-	return managers.experience:get_xp_dissected(true, 0, true)
+	local num_alive_players = managers.network:session():amount_of_alive_players()
+	return managers.experience:get_xp_dissected(true, num_alive_players, true)
 end
 
 function xp_string(n)
