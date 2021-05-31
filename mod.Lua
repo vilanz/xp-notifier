@@ -5,7 +5,7 @@ function xp_string(n)
 	if managers.experience ~= nil then -- Check for null/nil so we dont crash
 	   return managers.experience:experience_string(n)
 	else 
-	   return n
+	   return tostring(n)
 	end
 end
 
