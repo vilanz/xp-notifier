@@ -5,11 +5,13 @@ Hooks:PreHook(ExperienceManager, "mission_xp_award", "xp_notifier_before_xp_incr
 end)
 
 Hooks:PostHook(ExperienceManager, "mission_xp_award", "xp_notifier_after_xp_increase", function ()
-	local new_total_xp = get_current_total_xp()
-	local xp_added = new_total_xp - previous_total_xp
-	
-	local notification_text = xp_string(xp_added) .. " XP gained (Total XP: " .. xp_string(new_total_xp) .. ")"
-	managers.hud:show_hint({ text = notification_text })
+	if Utils:IsInHeist() then
+		local new_total_xp = get_current_total_xp()
+		local xp_added = new_total_xp - previous_total_xp
+		
+		local notification_text = xp_string(xp_added) .. " XP gained (Total XP: " .. xp_string(new_total_xp) .. ")"
+		managers.hud:show_hint({ text = notification_text })
+	end
 end)
 
 function get_current_total_xp()
