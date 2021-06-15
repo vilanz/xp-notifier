@@ -11,7 +11,7 @@
 	"updates": [{
 		"identifier": "xp-notifier",
 		"host": {
-			"meta": "https://github.com/vilanz/xp-notifier/download/releases/latest/meta.json"
+			"meta": "https://github.com/vilanz/xp-notifier/releases/latest/download/meta.json"
 		}
 	}]
 }
