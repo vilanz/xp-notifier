@@ -2,7 +2,7 @@
 	"name": "XPNotifier",
 	"description": "Logs experience gains",
 	"author": "vilanz",
-	"version": "1.3",
+	"version": "1.4",
 	"image": "icon.png",
 	"hooks": [{
 		"hook_id": "lib/managers/experiencemanager",
