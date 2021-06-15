@@ -10,4 +10,5 @@ Just extract `XpNotifier.zip` (from the latest published release in GitHub) to y
 
 ## Generating assets for releases
 
-Run `./release-assets/create-assets.sh` and it'll create a `meta.json` (for ingame auto-updater) and `XpNotifier.zip` (for the mod files itself). This could be included in a GitHub Action someday.
+Run `./release-assets/create-assets.sh` and it'll create a `meta.json` (for ingame auto-updater) and `XpNotifier.zip` (for the mod files itself).
+It only works on Windows due to the BLT Hasher being Windows-only. This could be made into a GitHub Action...
