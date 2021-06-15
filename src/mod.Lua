@@ -21,7 +21,7 @@ end)
 function get_current_total_xp()
 	local mission_not_failed = true -- always will be since we're ingame
 	local num_alive_players = managers.network:session():amount_of_alive_players()
-	local is_not_in_custody = true
+	local is_not_in_custody = not Utils:IsInCustody()
 	return managers.experience:get_xp_dissected(
 		mission_not_failed, num_alive_players, is_not_in_custody
 	)
