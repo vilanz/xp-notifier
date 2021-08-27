@@ -4,10 +4,26 @@
 	"author": "vilanz",
 	"version": "1.4",
 	"image": "icon.png",
-	"hooks": [{
-		"hook_id": "lib/managers/experiencemanager",
-		"script_path": "mod.lua"			
-	}],
+	"pre_hooks" : [
+		{
+			"hook_id" : "lib/entry",
+			"script_path" : "common.lua"
+		}
+	],
+	"hooks": [
+		{
+			"hook_id" : "lib/managers/menumanager",
+			"script_path" : "menu/menumanager.lua"
+		},		
+		{
+			"hook_id": "lib/managers/experiencemanager",
+			"script_path": "mod.lua"			
+		},
+		{
+			"hook_id": "lib/managers/mission/elementexperience",
+			"script_path": "elementexperience.lua"			
+		},
+	],
 	"updates": [{
 		"identifier": "xp-notifier",
 		"host": {
