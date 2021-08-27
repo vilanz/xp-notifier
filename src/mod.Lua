@@ -35,7 +35,7 @@ Hooks:PostHook(ExperienceManager, "mission_xp_award", "xp_notifier_after_xp_incr
 	
 	managers.hud:show_hint({ text = notification_text })
 	
-	if (XPNotifier.settings.debug_log) then
+	if (XPNotifier.settings.debug_log and managers.job:current_real_job_id()) then
 		local job_name = managers.localization:text(tweak_data.narrative.jobs[managers.job:current_real_job_id()].name_id)
 		--I don't think the commas look good in the log
 		log("[XpNotifier] XP added on " .. job_name .. " by " .. _G.name_of_source .. ": " ..
