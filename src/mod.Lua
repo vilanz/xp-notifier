@@ -33,10 +33,11 @@ function some_manager_is_missing()
 	local is_missing = managers.network == nil
 		or managers.experience == nil
 		or managers.hud == nil
+		or managers.hud._hud_hint == nil
 	if is_missing then
 		log("[XpNotifier] There's a manager missing!")
 	end
-	return 
+	return is_missing
 end
 
 function xp_string(n)
