@@ -1,0 +1,17 @@
+{
+	"xpnotif_options_menu_title" : "XP Notifier",
+	"xpnotif_options_menu_desc" : "Toggle showing total XP, base XP, rounding to thousands, and logging XP gains to file",
+
+	"xpnotif_options_show_total_title" : "Show Total XP",
+	"xpnotif_options_show_total_desc" : "Display the total XP after the gained XP",
+
+	"xpnotif_options_show_base_title" : "Show Base XP",
+	"xpnotif_options_show_base_desc" : "Display the gained/total base XP after the gained/total XP",
+
+	"xpnotif_options_show_thousands_title" : "Round to Nearest Thousand",
+	"xpnotif_options_show_thousands_desc" : "Display XP numbers as '289K' instead of '289,374'",
+
+	"xpnotif_options_debug_log_title" : "Log to File",
+	"xpnotif_options_debug_log_desc" : "Log each XP gain to BLT's log file"
+
+}

@@ -1,0 +1,41 @@
+{
+	"menu_id" : "xpnotif_options_menu",
+	"parent_menu_id" : "blt_options",
+	"title" : "xpnotif_options_menu_title",
+	"description" : "xpnotif_options_menu_desc",
+	"back_callback" : "XPNotifierOptionsSave",
+	"items" : [
+		{
+			"type" : "toggle",
+			"id" : "show_total",
+			"title" : "xpnotif_options_show_total_title",
+			"description" : "xpnotif_options_show_total_desc",
+			"callback" : "XPNotifierOptionsCheckbox",
+			"value" : "show_total"
+		},
+		{
+			"type" : "toggle",
+			"id" : "show_base",
+			"title" : "xpnotif_options_show_base_title",
+			"description" : "xpnotif_options_show_base_desc",
+			"callback" : "XPNotifierOptionsCheckbox",
+			"value" : "show_base"
+		},
+		{
+			"type" : "toggle",
+			"id" : "round_thousands",
+			"title" : "xpnotif_options_show_thousands_title",
+			"description" : "xpnotif_options_show_thousands_desc",
+			"callback" : "XPNotifierOptionsCheckbox",
+			"value" : "round_thousands"
+		},
+		{
+			"type" : "toggle",
+			"id" : "debug_log",
+			"title" : "xpnotif_options_debug_log_title",
+			"description" : "xpnotif_options_debug_log_desc",
+			"callback" : "XPNotifierOptionsCheckbox",
+			"value" : "debug_log"
+		}
+	]
+}
