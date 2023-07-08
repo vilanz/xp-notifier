@@ -1,3 +1,4 @@
+
 _G.XPNotifier = _G.XPNotifier or {}
 XPNotifier._path = ModPath
 XPNotifier._data_path = SavePath .. 'xpnotifier.txt'
