@@ -17,7 +17,7 @@ echo "2. Zipping game files to XpNotifier.zip"
 echo "Creating XpNotifier folder..."
 mkdir -p XpNotifier
 rm -f XpNotifier/*
-cp ../src/* ./XpNotifier
+cp -r ../src/* ./XpNotifier
 
 echo "Zipping src folder..."
 ./7za.exe a XpNotifier.zip ./XpNotifier/ > /dev/null
