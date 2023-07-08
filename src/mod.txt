@@ -2,7 +2,7 @@
 	"name": "XPNotifier",
 	"description": "Logs experience gains",
 	"author": "vilanz",
-	"version": "1.4",
+	"version": "2.0",
 	"image": "icon.png",
 	"pre_hooks": [
 		{
