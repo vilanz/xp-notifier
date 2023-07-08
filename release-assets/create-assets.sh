@@ -15,8 +15,8 @@ sed "s/__hash__/$HASH/g" base.meta.json > meta.json
 echo "2. Zipping game files to XpNotifier.zip"
 
 echo "Creating XpNotifier folder..."
-mkdir -p XpNotifier
-rm -f XpNotifier/*
+mkdir -p ./XpNotifier
+rm -f -r ./XpNotifier/*
 cp -r ../src/* ./XpNotifier
 
 echo "Zipping src folder..."
